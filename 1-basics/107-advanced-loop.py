@@ -74,15 +74,16 @@ while True:
 def yanghui_triangle(max):
     n = 0
     L = [1,]
-    buf_L = []
+    #buf_L = []
     while n < max:
         yield L
-        L.insert(0, 0)
-        L.append(0)
-        for i in range(len(L)-1):
-            buf_L.append(L[i] + L[i+1])
-        L = buf_L
-        buf_L = []
+        L = [1] + [ L[i]+L[i+1] for i in range(len(L)-1) ] + [1]
+        #L.insert(0, 0)
+        #L.append(0)
+        #for i in range(len(L)-1):
+        #    buf_L.append(L[i] + L[i+1])
+        #L = buf_L
+        #buf_L = []
         n = n + 1
     return "Done!"
 
