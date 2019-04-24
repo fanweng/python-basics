@@ -92,3 +92,9 @@ def person_2(name, age, *, city="Ottawa", job):
 
 person_2("Dick", 22, job="Doctor")
 #person_2("Dick", 22, city="Montreal", height="173")   # height won't be accepted
+
+################################# lambda #######################################
+# lambda argument_list : expression
+
+my_sum = lambda x, y : x + y
+print(my_sum(2, 3))
