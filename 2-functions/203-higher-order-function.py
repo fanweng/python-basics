@@ -40,3 +40,26 @@ def char2num(s):
 
 rm = reduce(lambda x, y : x * 10 + y, map(char2num, '84751785'))
 print(type(rm), rm)
+
+################################# Filter #######################################
+
+# strip(char) returns a copy with leading and trailing char removed
+def not_empty(s):
+    return s and s.strip()
+
+# filter() applies fucntion "f" to every element in the Iterable object individually, if returning False, discard that element.
+filtered = filter(not_empty, ['A', '', 'B', None, 'C', '   '])
+print(filtered)
+print(list(filtered))
+
+################################## Sort ########################################
+
+list1 = sorted([3, 432, -12, -4, 63])
+print(list1)
+
+# sort list based on the "abs" value
+list2 = sorted([3, 432, -12, -4, 63], key=abs)
+print(list2)
+
+list3 = sorted(["BOb", "ZeUS", "hill", "DIRK"], key=str.lower, reverse=True)
+print(list3)
