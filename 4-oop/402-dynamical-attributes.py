@@ -18,7 +18,7 @@ from types import MethodType
 def set_age(self, age):
     self.age = age
 
-s1.set_age = MethodType(set_age, s1)
+s1.set_age = MethodType(set_age, s1)    # method is added dynamically to an instance, and for this instance ONLY
 s1.set_age(29)
 print(s1.age)
 
