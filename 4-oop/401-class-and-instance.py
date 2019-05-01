@@ -67,3 +67,33 @@ dog.eat()
 
 print(isinstance(dog, Dog))
 print(isinstance(dog, Animal))
+
+########################### Multiple Inheritance ###############################
+# Use "MixIn" to provide many optional features for a class
+
+class Pokemon(object):
+    pass
+
+class Kanto(Pokemon):
+    pass
+
+class Normal(Pokemon):
+    pass
+
+class Water(Pokemon):
+    pass
+
+class CutMixIn(object):
+    def cut(self):
+        print("Using cut...")
+
+class SurfMixIn(object):
+    def surf(self):
+        print("Using surf...")
+
+class Lapras(Kanto, Water): # inherit multiple parent classes
+    pass
+
+class Meowth(Kanto, Normal, SurfMixIn, CutMixIn): # Use MixIn class to add additional features
+    pass
+
